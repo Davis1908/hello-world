@@ -27,7 +27,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					height : 4 //Used to position the "Or" in the combined block.
 				}, 
 				media : [ //Stimuli
-					{image: 'https://polimi.eu.qualtrics.com/ControlPanel/Graphic.php?IM=IM_eQjz9DdY57iUVv0'}
+					{image: 'image1.jpeg'}
 				],
 				//Can change color and size of the targets here.
 				css : {color:'#31b404','font-size':'2em'}
@@ -133,7 +133,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			switchSideBlock : 4, //By default, we switch on block 4 (i.e., after blocks 2 and 3 showed the first pairing condition).
 
 			base_url : {//Where are your images?
-				image : 'https://polimi.eu.qualtrics.com/Q/GraphicsSection?ContextLibraryID=UR_0oeERe1WGBbb8Am&LibraryID=UR_0oeERe1WGBbb8Am'
+				image : 'https://github.com/Davis1908/hello-world/image1.jpeg'
 			}, 
 			ITIDuration : 250, //Duration between trials.
 			
