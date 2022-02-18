@@ -3,9 +3,9 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qua
 	var API = new APIConstructor();
 		  return stiatExtension({
 		  category : { 
-		    name : 'Black people', //Will appear in the data.
+		    name : 'Your product', //Will appear in the data.
 		    title : {
-		      media : {word : 'Black people'}, //Name of the category presented in the task.
+		      media : {word : 'Your product'}, //Name of the category presented in the task.
 		      css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
 		      height : 7 //Used to position the "Or" in the combined block.
 		    }, 
@@ -18,38 +18,42 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qua
 
   		attribute1 : 
 			{
-			name : 'Unpleasant', //Attribute label
+			name : 'Detachment', //Attribute label
 			title : {
 				media : {word : 'Negative'}, //Name of the category presented in the task.
 				css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
 				height : 7 //Used to position the "Or" in the combined block.
 			}, 
 			media : [ //Stimuli
-				{word: 'Bomb'},
-				{word: 'Abuse'},
-				{word: 'Sadness'},
-				{word: 'Pain'},
-				{word: 'Poison'},
-				{word: 'Grief'}
+				{word: 'Indifferent'},
+				{word: 'Stranger'},
+				{word: 'Disinterested'},
+				{word: 'Trivial'},
+				{word: 'Emotionless'},
+				{word: 'Extraneous'},
+				{word: 'Impersonal'},
+			        {word: 'Neutral'}
 			], 
 			//Can change color and size of the targets here.
 			css : {color:'#31b404','font-size':'3em'}
 			},
 		attribute2 : 
 			{
-			name : 'Pleasant', //Attribute label
+			name : 'Attachment', //Attribute label
 			title : {
 				media : {word : 'Positive'}, //Name of the category presented in the task.
 				css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
 				height : 7 //Used to position the "Or" in the combined block.
 			}, 
 			media : [ //Stimuli
-				{word: 'Paradise'},
-				{word: 'Pleasure'},
-				{word: 'Cheer'},
-				{word: 'Wonderful'},
-				{word: 'Splendid'},
-				{word: 'Love'}
+				{word: 'Affectionate'},
+				{word: 'Familiar'},
+				{word: 'Relevant'},
+				{word: 'Meaningful'},
+				{word: 'Loved'},
+				{word: 'Bonded'},
+				{word: 'Intimate'},
+			  {word: 'Dear to me'}
 			], 
 			//Can change color and size of the targets here.
 			css : {color:'#31b404','font-size':'3em'}
