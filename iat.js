@@ -10,7 +10,7 @@ define(['pipAPI', 'https://raw.githubusercontent.com/Davis1908/hello-world/main/
 		      height : 7 //Used to position the "Or" in the combined block.
 		    }, 
 		    media : [ //Stimuli content as PIP's media objects
-    		    	{image : 'https://polimi.eu.qualtrics.com/ControlPanel/Graphic.php?IM=IM_eQjz9DdY57iUVv0'}
+    		    	{image : 'image1.jpeg'}
 		    ], 
 		    //Stimulus css (style)
 		    css : {color:'#31b404','font-size':'3em'}
@@ -60,7 +60,7 @@ define(['pipAPI', 'https://raw.githubusercontent.com/Davis1908/hello-world/main/
 			},
 
   base_url : {//Where are your images at?
-    image : 'https://polimi.eu.qualtrics.com/Q/GraphicsSection?ContextLibraryID=UR_0oeERe1WGBbb8Am&LibraryID=UR_0oeERe1WGBbb8Am'
+    image : 'https://github.com/Davis1908/hello-world/image1.jpeg'
   }}
   );
   });
