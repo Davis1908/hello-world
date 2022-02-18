@@ -3,9 +3,9 @@ mdefine(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qu
 	var API = new APIConstructor();
 		  return stiatExtension({
 		  category : { 
-		    name : 'Your product', //Will appear in the data.
+		    name : 'Your Product', //Will appear in the data.
 		    title : {
-		      media : {word : 'Your product'}, //Name of the category presented in the task.
+		      media : {word : 'Your Product'}, //Name of the category presented in the task.
 		      css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
 		      height : 7 //Used to position the "Or" in the combined block.
 		    }, 
