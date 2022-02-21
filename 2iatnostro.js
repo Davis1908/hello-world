@@ -3,9 +3,9 @@ define(['pipAPI', 'https://davis1908.github.io/hello-world/codicegrande.js'], fu
 	var API = new APIConstructor();
 		  return stiatExtension({
 		  category : { 
-		    name : 'Your product', //Will appear in the data.
+		    name : 'Mine', //Will appear in the data.
 		    title : {
-		      media : {word : 'Your product'}, //Name of the category presented in the task.
+		      media : {word : 'Mine'}, //Name of the category presented in the task.
 		      css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
 		      height : 7 //Used to position the "Or" in the combined block.
 		    }, 
