@@ -27,7 +27,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					height : 4 //Used to position the "Or" in the combined block.
 				}, 
 				media : [ //Stimuli
-					{image: 'image1.jpeg'}
+					{image: 'image.jpeg'}
 				],
 				//Can change color and size of the targets here.
 				css : {color:'#31b404','font-size':'2em'}
