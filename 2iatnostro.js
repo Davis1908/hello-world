@@ -13,7 +13,7 @@ define(['pipAPI', 'https://davis1908.github.io/hello-world/codicegrande.js'], fu
     		    	{image : 'image.jpeg'}
 		    ], 
 		    //Stimulus css (style)
-		    css : {color:'#31b404','font-size':'3em'}
+		    css : {color:'#191970','font-size':'3em'}
 		  },	
 
   		attribute1 : 
