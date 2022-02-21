@@ -6,7 +6,7 @@ define(['pipAPI', 'https://davis1908.github.io/hello-world/codicegrande.js'], fu
 		    name : 'Mine', //Will appear in the data.
 		    title : {
 		      media : {word : 'Mine'}, //Name of the category presented in the task.
-		      css : {color:'#000000','font-size':'2em'}, //Style of the category title.
+		      css : {color:'#191970','font-size':'2em'}, //Style of the category title.
 		      height : 7 //Used to position the "Or" in the combined block.
 		    }, 
 		    media : [ //Stimuli content as PIP's media objects
