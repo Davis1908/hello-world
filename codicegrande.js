@@ -89,7 +89,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				{ 
 					instHTML : '', 
 					block : 2, 
-					miniBlocks : 2, 
+					miniBlocks : 1, 
 					singleAttTrials : 10, 
 					sharedAttTrials : 7, 
 					categoryTrials : 7
@@ -105,7 +105,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				{ 
 					instHTML : '', 
 					block : 4, 
-					miniBlocks : 2, 
+					miniBlocks : 1, 
 					singleAttTrials : 10, 
 					sharedAttTrials : 7, 
 					categoryTrials : 7
