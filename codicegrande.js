@@ -23,7 +23,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				name : 'Mine', //Category name to be used for feedback and logging.
 				title : {
 					media : {word : 'Mine'}, //Name of the category presented in the task.
-					css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
+					css : {color:'#000000','font-size':'2em'}, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				}, 
 				media : [ //Stimuli
