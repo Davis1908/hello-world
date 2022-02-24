@@ -1,4 +1,4 @@
-define(['pipAPI', 'https://davis1908.github.io/hello-world/codicegrandejordan.js'], function(APIConstructor, stiatExtension){
+define(['pipAPI', 'https://davis1908.github.io/hello-world/codicegrandeneromarro.js'], function(APIConstructor, stiatExtension){
 	
 	var API = new APIConstructor();
 		  return stiatExtension({
@@ -10,7 +10,7 @@ define(['pipAPI', 'https://davis1908.github.io/hello-world/codicegrandejordan.js
 		      height : 7 //Used to position the "Or" in the combined block.
 		    }, 
 		    media : [ //Stimuli content as PIP's media objects
-    		    	{image : 'NBYJORDAN.jpg'}
+    		    	{image : 'NBYNEROMARRO.jpg'}
 		    ], 
 		    //Stimulus css (style)
 		    css : {color:'#191970','font-size':'3em'}
