@@ -713,6 +713,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			//We separate each block to mini blocks to reduce repetition of categories and responses.
 			for (var iMini = 1; iMini <= piCurrent.trialsByBlock[iBlock-1].miniBlocks; iMini++)
 			{//For each mini block
+				var map = ["first","second","third","fourth","fifth"];
 				var mixer = 
 				{//This mixer will randomize the trials of all the three groups.
 					mixer : 'random', 
@@ -724,7 +725,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 							data : 
 							[{
 								inherit : singleAttribute, 
-								data : {condition : currentCondition, block : iBlock}, 
+								data : {condition : currentCondition, block : iBlock, parcel : map[iBlock]}, 
 								layout : blockLayout.concat(reminderStimulus)
 							}]
 						}, 
@@ -734,7 +735,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 							data : 
 							[{
 								inherit : catAttribute, 
-								data : {condition : currentCondition, block : iBlock}, 
+								data : {condition : currentCondition, block : iBlock, parcel : map[iBlock]}, 
 								layout : blockLayout.concat(reminderStimulus)
 							}]
 						} 
@@ -749,7 +750,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 							data : 
 							[{
 								inherit : catSide, 
-								data : {condition : currentCondition, block : iBlock}, 
+								data : {condition : currentCondition, block : iBlock, parcel : map[iBlock]}, 
 								layout : blockLayout.concat(reminderStimulus)
 							}]
 						}
@@ -777,6 +778,55 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				}			
 			]
 		});
+		
+		trialSequence.push({
+         	   inherit: {set:'introduction', type:'byData', data: {block:'generic'}},
+         	   data: {blockStart:true},
+       	  	   stimuli: [],
+      	  	   customize: function(){
+                /* global console */
+                var DScoreObj, DScore, FBMsg;
+                var trial = this;
+
+
+                scorer.addSettings('compute',{
+                    parcelValue : ['fifth']
+                });
+
+                DScoreObj = scorer.computeD();
+                var DScore1= DScoreObj.DScore;
+
+                //////second call to score//////
+                scorer.addSettings('compute',{
+                    parcelValue : ['third']
+                });
+
+                DScoreObj = scorer.computeD();
+                var DScore2 = DScoreObj.DScore;
+
+                //avrage the scores
+                console.log(DScore1);
+                console.log(DScore2);
+                // If all scores are numbers
+                if ((DScore1 !== '') && (DScore2 !== '')){
+                    //Average the 4 scores
+                    DScore = (parseFloat(DScore1) - parseFloat(DScore2));
+                    FBMsg = scorer.getFBMsg(DScore);
+                } else {
+                    DScore = '';
+                    FBMsg = 'An error has occurred';
+                }
+
+                var media = {css:{color:'black'},media:{html:'<div><p style="font-size:28px"><color="#FFFAFA"> '+FBMsg+'<br>The Score is:'+DScore+'</p></div>'}};
+                trial.stimuli.push(media);
+                scorer.dynamicPost({
+                    score1: DScoreObj.DScore,
+                    feedback1: DScoreObj.FBMsg
+                });
+
+            }
+        );
+			
 		//Now add the trials sequence to the API.
 		API.addSequence(trialSequence);
 		
