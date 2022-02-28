@@ -785,7 +785,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 		**/
 		
 		//Settings for the score computation.
-		scorer.addSettings('compute',{
+		scorer.addSettings('compute',{ 
 			ErrorVar:'score',
 			condVar:'condition',
 			//condition 1
@@ -800,11 +800,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			],
 			parcelVar : "parcel", //We use only one parcel because it is probably not less reliable.
 			parcelValue : ['first'],
-			fastRT : 150, //Below this reaction time, the latency is considered extremely fast.
-			maxFastTrialsRate : 0.1, //Above this % of extremely fast responses within a condition, the participant is considered too fast.
-			minRT : 400, //Below this latency
-			maxRT : 10000, //above this
-			errorLatency : {use:"latency", penalty:600, useForSTD:true},
+			fastRT : 350, //Below this reaction time, the latency is considered extremely fast.
+			maxFastTrialsRate : 0.0, //Above this % of extremely fast responses within a condition, the participant is considered too fast.
+			minRT : 350, //Below this latency
+			maxRT : 5000, //above this
+			maxErrorParcelRate : 0.2,  //If the % of error trials are greater than this value then an error will be generated and saved.
+			errorLatency : {use:"penalty", penalty:400, useForSTD:true},
 			postSettings : {score:"score",msg:"feedback",url:"/implicit/scorer"}
 		});
 
@@ -840,7 +841,20 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			scoreMessageObject.notEnough = piCurrent.notEnough;
 		}
 		//Set messages to the scorer.
-		scorer.addSettings('message',scoreMessageObject);
+		scorer.addSettings('message',{
+			manyErrors: "There were too many errors made to determine a result.",
+        		tooFast: "There were too many fast trials to determine a result.",
+        		notEnough: "There were not enough trials to determine a result.",
+			MessageDef: [
+            { cut:'-0.65', message:'strong preference Detachment' },
+            { cut:'-0.35', message:'moderate preference left' },
+            { cut:'-0.15', message:'slight preference left' },
+            { cut:'0.15', message:'little to no preference' },
+            { cut:'0.35', message:'slight preference right' },
+            { cut:'0.65', message:'moderate preference right' },
+            { cut:'5', message:'strong preference right' }
+        ]
+		});
 
 		//What to do at the end of the task.
 		API.addSettings('hooks',{
