@@ -29,7 +29,7 @@ define(['pipAPI','pipScorer'], function(APIConstructor,Scorer) {
         proportions : 0.8,
         //Change the colors to allow better presentation of the colored stimuli.
         background: 'white',
-        canvasBackground: 'green',
+        canvasBackground: 'white',
         borderWidth: 5,
         borderColor: 'black'
     });
