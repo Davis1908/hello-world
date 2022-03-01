@@ -29,10 +29,10 @@ define(['pipAPI', 'https://davis1908.github.io/hello-world/codicegrandeviola.js'
 				{word: 'Stranger'},
 				{word: 'Disinterested'},
 				{word: 'Trivial'},
-				{word: 'Emotionless'},
+				
 				{word: 'Extraneous'},
 				{word: 'Impersonal'},
-			        {word: 'Neutral'}
+			      
 			], 
 			//Can change color and size of the targets here.
 			css : {color:'#31b404','font-size':'3em'}
@@ -51,9 +51,9 @@ define(['pipAPI', 'https://davis1908.github.io/hello-world/codicegrandeviola.js'
 				{word: 'Relevant'},
 				{word: 'Meaningful'},
 				{word: 'Loved'},
-				{word: 'Bonded'},
+			
 				{word: 'Intimate'},
-			  {word: 'Dear to me'}
+			
 			], 
 			//Can change color and size of the targets here.
 			css : {color:'#31b404','font-size':'3em'}
