@@ -1,4 +1,4 @@
-define(['pipAPI', 'https://davis1908.github.io/hello-world/codicegrande05.js'], function(APIConstructor, stiatExtension){
+define(['pipAPI', 'https://davis1908.github.io/hello-world/codicegrande06.js'], function(APIConstructor, stiatExtension){
 	
 	var API = new APIConstructor();
 		  return stiatExtension({
