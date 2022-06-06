@@ -10,7 +10,7 @@ define(['pipAPI', 'https://davis1908.github.io/hello-world/codicegrandes00v.js']
 		      height : 7 //Used to position the "Or" in the combined block.
 		    }, 
 		    media : [ //Stimuli content as PIP's media objects
-    		    	{image : 's00v.jpg'}
+    		    	{image : 's00vr.jpg'}
 		    ], 
 		    //Stimulus css (style)
 		    css : {color:'#191970','font-size':'3em'}
