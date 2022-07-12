@@ -1,4 +1,4 @@
-define(['pipAPI', 'https://davis1908.github.io/hello-world/codice2iat1.js'], function(APIConstructor, stiatExtension){
+define(['pipAPI', 'https://davis1908.github.io/hello-world/studio2codice1.js'], function(APIConstructor, stiatExtension){
 	
 	var API = new APIConstructor();
 		  return stiatExtension({
@@ -10,7 +10,7 @@ define(['pipAPI', 'https://davis1908.github.io/hello-world/codice2iat1.js'], fun
 		      height : 7 //Used to position the "Or" in the combined block.
 		    }, 
 		    media : [ //Stimuli content as PIP's media objects
-    		    	{image : 'BR.jpg'}
+    		    	{image : 'bpBR.jpg'}
 		    ], 
 		    //Stimulus css (style)
 		    css : {color:'#191970','font-size':'3em'}
